@@ -9,3 +9,24 @@ Ninja Framework - http://www.ninjaframework.org/
 Ninja Maven Plugin - http://www.ninjaframework.org/documentation/basic_concepts/super_dev_mode.html
 
 Gretty webpage - https://github.com/akhikhl/gretty
+
+
+The easiest way and the one that will require less work to maintain (when adding new modules) is decribed in the main build.gradle file:
+
+apply plugin: 'org.akhikhl.gretty'
+gretty {
+	/** Sets the context path */
+	contextPath = '/'
+
+	/** Sets another project (in the same project tree) as overlay source. */
+ 	overlay ':ninja-webapp'
+
+	/** Adds all the subprojects' source code dirs of this project to be scaned when the code
+	 *  changes. In this way, you don't need ot specify a scanDir per project
+	 */
+	(project.getSubprojects() - project(':ninja-webapp') ).sourceSets.main.java.srcDirs.each { sourceDirs ->
+		sourceDirs.each{
+			scanDir "${it}"
+		}
+	}
+}
