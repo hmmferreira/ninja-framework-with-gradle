@@ -13,8 +13,7 @@ Gretty webpage - https://github.com/akhikhl/gretty
 
 The easiest way and the one that will require less work to maintain (when adding new modules) is decribed in the main build.gradle file:
 
-{
-
+```Gradle
 apply plugin: 'org.akhikhl.gretty'
 gretty {
 	/** Sets the context path */
@@ -32,5 +31,4 @@ gretty {
 		}
 	}
 }
-
-}
+```
