@@ -1,0 +1,1 @@
+# ninja-framework-with-gradle
