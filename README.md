@@ -34,7 +34,7 @@ gretty {
 The gretty plugin should also be applied to the overlay webapp (in this scenario, ninja-webapp) as we can check in the ninja-webapp's build.gradle file
 
 
-## In order to test this solutin, you will just need to execute the following command:
+## In order to test this solution, you will just need to execute the following command:
 
 ```Batchfile
  ./gradlew jettyRun
