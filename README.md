@@ -32,3 +32,5 @@ gretty {
 	}
 }
 ```
+
+The gretty plugin should also be applied to the overlay webapp (in this scenario, ninja-webapp) as we can check in the ninja-webapp's build.gradle file
